@@ -19,7 +19,7 @@ def getTextOverlay(input_image):
     output = cv2.bitwise_not(masked)
     
     #To add gaussianblur to smoothen the pixels abit
-    #Comment line30 and uncomment the lines below
+    #Comment line19 and uncomment the lines below
     #out = cv2.bitwise_not(masked)
     #blur = cv2.GaussianBlur(out,(5,5),0)
     #output = cv2.addWeighted(blur,2.5,out,-1.5,0)
@@ -29,7 +29,7 @@ def getTextOverlay(input_image):
 if __name__ == '__main__':
     image = cv2.imread('simpsons_frame0.png')
     output = getTextOverlay(image)
-    cv2.imwrite('simpons_text.png', output)
+    cv2.imwrite('simpons_textsmooth.png', output)
     
 #####################
 
