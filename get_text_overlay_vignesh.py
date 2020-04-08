@@ -7,7 +7,7 @@ import numpy as np
 
 def getTextOverlay(input_image):
     output = np.zeros(input_image.shape, dtype=np.uint8)
-    # Write your code here for output
+   
     #convert the image from BGR to HSV format
     hsv = cv2.cvtColor(image, cv2.COLOR_BGR2HSV)
     #Assign threshold values to extract only black text on the image
